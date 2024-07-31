@@ -1,0 +1,62 @@
+import parametros as pm
+import Clases_cambio_atacar as cl
+
+def menu_inicio(dinero, ronda):
+    print('-' * 36)
+    print('   Bienvenido al menú de acciones!  ')
+    print('-' * 36)
+    print()
+    print(f'Dinero disponible: {dinero}')
+    print(f'Ronda actual: {ronda}')
+    print()
+    print(f'--------Selecciona tu opción--------')
+    print()
+    print('[1] Tienda')
+    print('[2] Ejército')
+    print('[3] Combatir')
+    print()
+    print('[0] Salir')
+    print()
+    print(f'Escribe tu opción (1, 2, 3 o 0): ')
+
+def menu_tienda(dinero):
+    print('-' * 36)
+    print('    Bienvenido al menú de tienda!   ')
+    print('-' * 36)
+    print()
+    print(f'Dinero disponible: {dinero}')
+    print()
+    print(f'--------Selecciona tu opción--------')
+    print()
+    print(f'Objeto              Precio')
+    print()
+    print(f'[1] Gato Mago          {pm.PRECIO_MAG}')
+    print(f'[2] Gato Gurrero       {pm.PRECIO_GUE}')
+    print(f'[3] Gato Caballero     {pm.PRECIO_CAB}')
+    print()
+    print(f'[4] Item Armadura      {pm.PRECIO_ARMADURA}')
+    print(f'[5] Item Pergamino     {pm.PRECIO_PERGAMINO}')
+    print(f'[6] Item Lanza         {pm.PRECIO_LANZA}')
+    print()
+    print(f'[7] Curar Ejército     {pm.PRECIO_CURA}')
+    print()
+    print('[0] Salir')
+    print()
+    print(f'Escribe tu opción (0, 1, ... o 7): ')
+
+def selecciona_gato(lista):
+    print('-' * 36)
+    print('         Selecciona tu gato!        ')
+    print('-' * 36)
+    print()
+    print(f'       Nombre           Clase')
+    print()
+    for pos in range(len(lista)):
+        gato = lista[pos]
+        print(f'[{pos+1}] {gato.nombre: ^10.10s}     {gato.__class__.__name__: ^17.17s}')
+    print()
+    print(f'Indique su opción:')
+
+#gato_1 = cl.Paladín('Pedro', 3500, 3000, 30, 10, 40, 40)
+#gato_2 = cl. Guerrero('Holi', 3000, 2500, 15, 25, 45, 10)
+#selecciona_gato([gato_1, gato_2])
